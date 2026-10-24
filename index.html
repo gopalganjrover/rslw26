@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2nd Rover Scout Leader Workshop 2026 — Bangladesh Scouts, Gopalganj District Rover</title>
+<style>
+  :root{--violet:#2E2152;--violet2:#4A3A8C;--amber:#E8A42A;--amber-lt:#F6D79A;
+        --paper:#FDFBF6;--ink:#241C33;--mute:#5B5370}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);line-height:1.7;
+       font-family:"Avenir Next","Avenir","Segoe UI",system-ui,sans-serif}
+  header{background:var(--violet);color:#fff;padding:24px 18px;text-align:center;
+         border-bottom:5px solid var(--amber)}
+  header .org{font-size:.88rem;letter-spacing:.22em;text-transform:uppercase}
+  header h1{margin:.55rem 0 .3rem;font-size:1.3rem;line-height:1.45;font-weight:600}
+  header h1 sup{font-size:.6em;vertical-align:super}
+  header .meta{font-size:.92rem;color:var(--amber-lt)}
+  main{max-width:900px;margin:0 auto;padding:20px 16px 56px}
+  section{margin:28px 0}
+  h2{font-size:1rem;color:var(--violet2);letter-spacing:.08em;text-transform:uppercase;
+     border-left:5px solid var(--amber);padding:4px 0 4px 12px;margin:0 0 12px}
+  table{width:100%;border-collapse:collapse;font-size:.95rem;background:#fff}
+  th,td{border:1px solid #e2dccf;padding:9px 12px;text-align:left;vertical-align:top}
+  th{background:#F4F1EA;color:var(--violet);white-space:nowrap}
+  thead th{background:var(--violet);color:#fff}
+  .card{background:#fff;border:1px solid var(--amber-lt);border-top:4px solid var(--violet2);
+        border-radius:6px;padding:18px 20px}
+  .card h3{margin:0 0 10px;color:var(--violet);font-size:1.3rem}
+  .pill{display:inline-block;background:#EEEAF7;color:var(--violet2);border-radius:999px;
+        padding:3px 13px;font-size:.82rem;margin-right:7px}
+  .pending{color:var(--mute);font-style:italic}
+  .ok{color:var(--violet2);margin:14px 0 0;font-weight:600}
+  figure{margin:0 0 18px;background:#fff;border:1px solid var(--amber-lt);padding:12px}
+  figure img{width:100%;height:auto;display:block}
+  figcaption{font-size:.85rem;color:var(--mute);padding-top:8px;text-align:center}
+  footer{text-align:center;font-size:.85rem;color:var(--mute);padding:18px;
+         border-top:1px solid var(--amber-lt);letter-spacing:.1em}
+  a{color:var(--violet2)}
+  @media(max-width:520px){th,td{padding:7px 9px;font-size:.9rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="org">Bangladesh Scouts</div>
+  <div class="org">Gopalganj District Rover</div>
+  <h1>2<sup>nd</sup> Rover Scout Leader Workshop 2026</h1>
+  <div class="meta">Tuesday, 03 November 2026 · Conference Room, Administrative Building,
+    Gopalganj Government College</div>
+</header>
+
+<main>
+  <section id="participant">
+    <h2>Participant Details</h2>
+    <div class="card" id="pcard"><span class="pending">Scan the QR code printed on a
+      certificate to see that participant's details here.</span></div>
+  </section>
+
+  <section>
+    <h2>Programme Information</h2>
+    <table id="prog"></table>
+  </section>
+
+  <section>
+    <h2>Workshop Staff</h2>
+    <table id="staff"></table>
+  </section>
+
+  <section>
+    <h2>Programme Schedule</h2>
+    <table id="sched"></table>
+  </section>
+
+  <section>
+    <h2>Reference Charts</h2>
+    <figure>
+      <img src="rsl_chart_lifecycle.png" alt="The Adults in Scouting life-cycle">
+      <figcaption>The Adults in Scouting life-cycle — recruitment, performance and
+        decisions for the future</figcaption>
+    </figure>
+    <figure>
+      <img src="rsl_chart_youth.png" alt="The Youth Programme: why, how and what">
+      <figcaption>The Youth Programme — the purpose, the Scout Method and the
+        learning opportunities</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Contact and Verification</h2>
+    <div class="card">
+      To verify a certificate, contact the District Secretary, Bangladesh Scouts,
+      Gopalganj District Rover — mobile 01717314690,
+      e-mail <a href="mailto:gopalganjdistrictrover@gmail.com">gopalganjdistrictrover@gmail.com</a>.
+    </div>
+  </section>
+</main>
+
+<footer>Bangladesh Scouts, Gopalganj District Rover · Ready for Life</footer>
+
+<script>
+// ---------------------------------------------------------------------
+// All content is held in the four blocks below. Entries marked "………" are
+// to be filled in when the district office supplies them.
+// ---------------------------------------------------------------------
+const PROGRAMME = [
+  ["Workshop", "2nd Rover Scout Leader Workshop 2026"],
+  ["Organised by", "Bangladesh Scouts, Gopalganj District Rover"],
+  ["Venue", "Conference Room, Administrative Building (4th floor), Gopalganj Government College, Gopalganj"],
+  ["Date", "Tuesday, 03 November 2026 (day-long)"],
+  ["Reporting", "9:00 am at the venue"],
+  ["Participants", "Rover scout leaders, unit leaders and group secretaries of every rover scout group in the district"],
+  ["Contents", "Activating rover members and growing their number, the programmes of the different scouting branches, a leader's duties, unit organisational work, the method of earning the President's Rover Scout Award, writing the Log Book and completing the My Progress book"],
+  ["Registration fee", "Tk 100 per head (bKash 01758-179355)"],
+  ["Circular", "District Rover memo no. 649(40)/2026, dated 24 October 2026"]
+];
+
+const STAFF = [
+  ["Workshop Director", "Professor Masud Ahmed, ALT", "District Commissioner, Gopalganj District Rover"],
+  ["Member", "Md. Majnur Rashid, Woodbadger", "District Rover Scout Leader, Gopalganj District Rover"],
+  ["Member", "Md. Zubair Al Mahmud, ALT", "District Secretary, Gopalganj District Rover"],
+  ["………", "………", "Full staff list to be added"]
+];
+
+const SCHEDULE = [
+  ["9:00 am – 9:30 am", "Reporting and registration"],
+  ["………", "Inaugural session"],
+  ["………", "Session 1 — Activating rover members and growing the unit"],
+  ["………", "Session 2 — A rover scout leader's duties and unit organisation"],
+  ["………", "Session 3 — The P.R.S Award, the Log Book and the My Progress book"],
+  ["………", "Closing session and distribution of certificates"]
+];
+
+// Certificate number -> participant (filled automatically from the roster)
+const PARTICIPANTS = {
+  "001": {"name":"Md. Enamul Haque",
+          "unit":"Gopalganj Government College Rover Scout Group",
+          "role":"Rover Scout Leader", "bsid":"………", "date":"03 November 2026"}
+};
+
+function rows(tbl, data, head){
+  const t = document.getElementById(tbl);
+  let h = head ? "<thead><tr>" + head.map(c => "<th>"+c+"</th>").join("") + "</tr></thead>" : "";
+  h += "<tbody>" + data.map(r =>
+        "<tr>" + r.map((c,i) => (i===0 && !head ? "<th>"+c+"</th>" : "<td>"+c+"</td>")).join("") +
+        "</tr>").join("") + "</tbody>";
+  t.innerHTML = h;
+}
+rows("prog", PROGRAMME);
+rows("staff", STAFF, ["Role", "Name", "Designation"]);
+rows("sched", SCHEDULE, ["Time", "Session"]);
+
+const cert = (location.hash.match(/C=([^&]+)/) || [])[1];
+if (cert) {
+  const p = PARTICIPANTS[decodeURIComponent(cert)];
+  const box = document.getElementById("pcard");
+  box.innerHTML = p
+    ? "<h3>" + p["name"] + "</h3>" +
+      "<div><span class='pill'>Certificate No. " + cert + "/RSLW/2026</span>" +
+      "<span class='pill'>" + p["role"] + "</span></div>" +
+      "<table style='margin-top:14px'><tbody>" +
+      "<tr><th>Rover Scout Group</th><td>" + p["unit"] + "</td></tr>" +
+      "<tr><th>Bangladesh Scouts ID</th><td>" + p["bsid"] + "</td></tr>" +
+      "<tr><th>Date of participation</th><td>" + p["date"] + "</td></tr>" +
+      "<tr><th>Award</th><td>Certificate of Participation, 2nd Rover Scout Leader " +
+      "Workshop 2026</td></tr>" +
+      "</tbody></table>" +
+      "<p class='ok'>&#10004; This certificate is recorded with Bangladesh Scouts, " +
+      "Gopalganj District Rover.</p>"
+    : "<span class='pending'>Certificate No. " + cert + " was not found in the record. " +
+      "Please contact the district office for verification.</span>";
+}
+</script>
+</body>
+</html>
