@@ -132,6 +132,10 @@ const PROGRAMME = [
   ["In cooperation with", "Bangladesh Scouts Rover Region"],
   ["Funded and managed by", "Bangladesh Scouts, Gopalganj District Rover"],
   ["Reporting", "9:00 am at the venue"],
+  ["Participants", "21 rover scout leaders, assistant rover scout leaders and group secretaries"],
+  ["Workshop staff", "5 officials"],
+  ["Volunteers", "5"],
+  ["Total attendance", "31"],
   ["Registration fee", "Tk 100 per participant"],
   ["Catering", "Cooked meal; lunch and prayer break 1:00 pm \u2013 2:00 pm"],
   ["Training method", "Lecture method and demonstration"],
@@ -437,10 +441,21 @@ rows("crew", CREW, ["Activity", "Responsible", "Time"]);
 list("aims", AIMS);
 list("duties", DUTIES);
 
-const cert = (location.hash.match(/C=([^&]+)/) || [])[1];
-if (cert) {
-  const p = PARTICIPANTS[decodeURIComponent(cert)];
+function certFromUrl(){
+  const s = location.hash + " " + location.search;
+  const m = s.match(/[#?&]C=([^&#\s]+)/i);
+  return m ? decodeURIComponent(m[1]).trim().toUpperCase().replace(/\/RSLW\/2026$/i, "") : "";
+}
+
+function showCert(){
   const box = document.getElementById("pcard");
+  const cert = certFromUrl();
+  if (!cert) {
+    box.innerHTML = "<span class='pending'>Scan the QR code printed on a " +
+      "certificate to see that participant's details here.</span>";
+    return;
+  }
+  const p = PARTICIPANTS[cert] || PARTICIPANTS[("00" + cert).slice(-3)];
   box.innerHTML = p
     ? "<h3>" + p["name"] + "</h3>" +
       "<div><span class='pill'>Certificate No. " + cert + "/RSLW/2026</span>" +
@@ -457,7 +472,13 @@ if (cert) {
       "Gopalganj District Rover.</p>"
     : "<span class='pending'>Certificate No. " + cert + " was not found in the record. " +
       "Please contact the district office for verification.</span>";
+  document.getElementById("participant").scrollIntoView({block: "start"});
 }
+
+showCert();
+window.addEventListener("hashchange", showCert);
+window.addEventListener("popstate", showCert);
+window.addEventListener("pageshow", showCert);
 </script>
 </body>
 </html>
