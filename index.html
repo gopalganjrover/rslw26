@@ -38,6 +38,8 @@
          border-top:1px solid var(--amber-lt);letter-spacing:.1em}
   a{color:var(--violet2)}
   @media(max-width:520px){th,td{padding:7px 9px;font-size:.9rem}}
+  ol{margin:0 0 0 20px;padding:0}
+  ol li{margin:0 0 9px}
 </style>
 </head>
 <body>
@@ -62,8 +64,13 @@
   </section>
 
   <section>
-    <h2>Workshop Staff</h2>
-    <table id="staff"></table>
+    <h2>Objectives of the Workshop</h2>
+    <ol id="aims"></ol>
+  </section>
+
+  <section>
+    <h2>Plan of the Day</h2>
+    <table id="day"></table>
   </section>
 
   <section>
@@ -72,15 +79,31 @@
   </section>
 
   <section>
+    <h2>Workshop Staff</h2>
+    <table id="staff"></table>
+  </section>
+
+  <section>
+    <h2>Duties of a Rover Scout Leader</h2>
+    <ol id="duties"></ol>
+  </section>
+
+  <section>
+    <h2>Model Crew Meeting</h2>
+    <table id="crew"></table>
+    <p class="pending">A crew meeting may also be run as a 60-minute programme.</p>
+  </section>
+
+  <section>
     <h2>Reference Charts</h2>
     <figure>
       <img src="rsl_chart_lifecycle.png" alt="The Adults in Scouting life-cycle">
-      <figcaption>The Adults in Scouting life-cycle — recruitment, performance and
+      <figcaption>The Adults in Scouting life-cycle &mdash; recruitment, performance and
         decisions for the future</figcaption>
     </figure>
     <figure>
       <img src="rsl_chart_youth.png" alt="The Youth Programme: why, how and what">
-      <figcaption>The Youth Programme — the purpose, the Scout Method and the
+      <figcaption>The Youth Programme &mdash; the purpose, the Scout Method and the
         learning opportunities</figcaption>
     </figure>
   </section>
@@ -89,7 +112,7 @@
     <h2>Contact and Verification</h2>
     <div class="card">
       To verify a certificate, contact the District Secretary, Bangladesh Scouts,
-      Gopalganj District Rover — mobile 01717314690,
+      Gopalganj District Rover &mdash; mobile 01717314690,
       e-mail <a href="mailto:gopalganjdistrictrover@gmail.com">gopalganjdistrictrover@gmail.com</a>.
     </div>
   </section>
@@ -99,35 +122,87 @@
 
 <script>
 // ---------------------------------------------------------------------
-// All content is held in the four blocks below. Entries marked "………" are
-// to be filled in when the district office supplies them.
+// All content below is taken from the official workshop report,
+// "2nd Rover Scout Leader Workshop 2026", signed by the Workshop Director.
 // ---------------------------------------------------------------------
 const PROGRAMME = [
   ["Workshop", "2nd Rover Scout Leader Workshop 2026"],
-  ["Organised by", "Bangladesh Scouts, Gopalganj District Rover"],
-  ["Venue", "Conference Room, Administrative Building (4th floor), Gopalganj Government College, Gopalganj"],
   ["Date", "Tuesday, 03 November 2026 (day-long)"],
+  ["Venue", "Conference Room, Administrative Building, Gopalganj Government College, Gopalganj"],
+  ["In cooperation with", "Bangladesh Scouts Rover Region"],
+  ["Funded and managed by", "Bangladesh Scouts, Gopalganj District Rover"],
   ["Reporting", "9:00 am at the venue"],
-  ["Participants", "Rover scout leaders, unit leaders and group secretaries of every rover scout group in the district"],
-  ["Contents", "Activating rover members and growing their number, the programmes of the different scouting branches, a leader's duties, unit organisational work, the method of earning the President's Rover Scout Award, writing the Log Book and completing the My Progress book"],
-  ["Registration fee", "Tk 100 per head (bKash 01758-179355)"],
-  ["Circular", "District Rover memo no. 649(40)/2026, dated 24 October 2026"]
+  ["Registration fee", "Tk 100 per participant"],
+  ["Catering", "Cooked meal; lunch and prayer break 1:00 pm \u2013 2:00 pm"],
+  ["Training method", "Lecture method and demonstration"],
+  ["Training materials", "Handouts, charts, chalk and duster, rope, poster paper, marker pens, flags, magnet board and magnets, white board, overhead projector, pointer"],
+  ["Workshop Director", "Professor Masud Ahmed, ALT, Commissioner, Bangladesh Scouts Gopalganj District Rover"]
 ];
 
-const STAFF = [
-  ["Workshop Director", "Professor Masud Ahmed, ALT", "District Commissioner, Gopalganj District Rover"],
-  ["Member", "Md. Majnur Rashid, Woodbadger", "District Rover Scout Leader, Gopalganj District Rover"],
-  ["Member", "Md. Zubair Al Mahmud, ALT", "District Secretary, Gopalganj District Rover"],
-  ["………", "………", "Full staff list to be added"]
+const AIMS = [
+  "To gain an up-to-date understanding of scouting as a whole.",
+  "To understand the proper duties and responsibilities of a rover scout leader.",
+  "To learn, through an exchange of views, how to run regular scout programmes with rovers and girls-in-rovers."
+];
+
+const DAY = [
+  ["9:00 am \u2013 9:30 am", "Attendance and registration"],
+  ["9:30 am \u2013 10:00 am", "Inaugural ceremony"],
+  ["10:00 am \u2013 1:00 pm", "Sessions"],
+  ["1:00 pm \u2013 2:00 pm", "Lunch, prayer and rest"],
+  ["2:00 pm \u2013 4:30 pm", "Sessions"],
+  ["4:30 pm \u2013 5:00 pm", "Closing ceremony"]
 ];
 
 const SCHEDULE = [
-  ["9:00 am – 9:30 am", "Reporting and registration"],
-  ["………", "Inaugural session"],
-  ["………", "Session 1 — Activating rover members and growing the unit"],
-  ["………", "Session 2 — A rover scout leader's duties and unit organisation"],
-  ["………", "Session 3 — The P.R.S Award, the Log Book and the My Progress book"],
-  ["………", "Closing session and distribution of certificates"]
+  ["9:00 am", "Attendance, registration and division into groups", "Md. Enamul Haque"],
+  ["9:30 am", "Inaugural ceremony", "Md. Zubair Al Mahmud"],
+  ["10:00 am", "Objectives of the workshop; what rovering is and why; the definition, mission, aim and objectives of the Scout Movement; its principles and method", "Professor Masud Ahmed"],
+  ["10:30 am", "Understanding the rover scout programme: the My Progress book, the Log Book, the P.R.S and C.D awards", "Md. Zubair Al Mahmud"],
+  ["11:30 am", "(a) The administrative and organisational structure of the Scout Movement, district down to unit; (b) the patrol system \u2014 its purpose and necessity, forming a patrol and its functions, forming the patrol council (demonstration)", "Shankar Kumar Sana"],
+  ["12:30 pm", "Leadership: (a) the duties of a unit leader; (b) the qualities of a unit leader", "Md. Zubair Al Mahmud"],
+  ["1:30 pm", "Lunch and prayer break", "\u2014"],
+  ["2:00 pm", "What it takes to earn the Wood Badge, and the duties and responsibilities of a rover scout leader (group work)", "Professor Shuklal Biswas"],
+  ["2:30 pm", "Review of the organisational position of the units: institution-wise group formation, renewal, statistics, collection of rover scout fees and implementation of the government circular", "Professor Shuklal Biswas and Professor Masud Ahmed"],
+  ["3:15 pm", "The idea of a running 60-to-90-minute crew meeting, and the need to hold crew meetings regularly", "Shankar Kumar Sana and Md. Enamul Haque"],
+  ["3:45 pm", "Setting and implementing unit-wise targets for increasing rover scout membership", "Md. Enamul Haque"],
+  ["4:15 pm", "Workshop recommendations, announcements and open discussion", "Professor Masud Ahmed"],
+  ["4:30 pm", "Distribution of certificates and closing ceremony", "Professor Masud Ahmed and all"]
+];
+
+const STAFF = [
+  ["Workshop Director", "Professor Masud Ahmed, ALT", "Commissioner, Bangladesh Scouts Gopalganj District Rover; Vice-Principal, District Administration School and College, Gopalganj"],
+  ["Member of staff", "Shankar Kumar Sana, ALT", "Group Committee Chairman's Representative, Bangladesh Scouts, Khulna District Rover"],
+  ["Member of staff", "Md. Zubair Al Mahmud, ALT", "Secretary, Bangladesh Scouts Gopalganj District Rover; Associate Professor of English, Gopalganj Science and Technology University"],
+  ["Member of staff", "Professor Shuklal Biswas, Woodbadger (CALT)", "Treasurer, Bangladesh Scouts Gopalganj District Rover; Head, Department of Botany, Gopalganj Government College"],
+  ["Member of staff", "Md. Enamul Haque, Skill Course", "Assistant Commissioner (Public Relations and Marketing), Gopalganj District Rover; Assistant Professor of Sociology, Kazi Zahurul Haque College, Gopalganj"]
+];
+
+const DUTIES = [
+  "To run a rover scout unit under the supervision of the group rover scout leader and with the help of the assistant rover scout leader.",
+  "To encourage and advise the patrol council so that it runs properly.",
+  "To encourage, advise and instruct the rover scout unit council, and to make it fully aware and responsible for the unit's internal discipline, programme, fund-keeping and expenditure.",
+  "To establish rover scout work in a form guardians, neighbours and society can support, and to win public support for the money and training materials the work needs."
+];
+
+const CREW = [
+  ["Attendance", "Senior Rover Mate", "1 min"],
+  ["Flag break", "Rover Leader", "2 min"],
+  ["Prayer song", "Rover", "3 min"],
+  ["Inspection, subscription and reporting", "Rover Mate", "6 min"],
+  ["Announcements", "Rover Leader", "3 min"],
+  ["Game / song / dance / story / drama", "Rover Mate", "6 min"],
+  ["Revision of the previous lesson", "Rover Mate", "15 min"],
+  ["Game / song / dance", "Rover Mate", "6 min"],
+  ["New lesson 1", "Rover Mate", "15 min"],
+  ["Game / song / competition", "Rover Mate", "6 min"],
+  ["New lesson 2", "Rover Mate", "15 min"],
+  ["Game / song / drama", "Rover Mate", "5 min"],
+  ["Gathering at the flag", "Senior Rover Mate", "2 min"],
+  ["Announcements and prayer", "Rover Leader", "3 min"],
+  ["Lowering the flag", "Rover Leader", "1 min"],
+  ["Dismissal", "Senior Rover Mate", "1 min"],
+  ["Total", "", "90 min"]
 ];
 
 // Certificate number -> participant (filled automatically from the roster)
@@ -145,9 +220,17 @@ function rows(tbl, data, head){
         "</tr>").join("") + "</tbody>";
   t.innerHTML = h;
 }
+function list(id, items){
+  document.getElementById(id).innerHTML =
+    items.map(s => "<li>" + s + "</li>").join("");
+}
 rows("prog", PROGRAMME);
-rows("staff", STAFF, ["Role", "Name", "Designation"]);
-rows("sched", SCHEDULE, ["Time", "Session"]);
+rows("day", DAY, ["Time", "Programme"]);
+rows("sched", SCHEDULE, ["Time", "Session", "Taken by"]);
+rows("staff", STAFF, ["Role", "Name and scout qualification", "Designation"]);
+rows("crew", CREW, ["Activity", "Responsible", "Time"]);
+list("aims", AIMS);
+list("duties", DUTIES);
 
 const cert = (location.hash.match(/C=([^&]+)/) || [])[1];
 if (cert) {
